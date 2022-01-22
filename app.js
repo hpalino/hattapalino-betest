@@ -34,4 +34,4 @@ app.use('/', healthRouter);
 app.use('/sign', signRouter);
 
 // listening to port
-app.listen('3000',()=> console.log('Server Running at port: 3000'));
+app.listen(Number(process.env.APP_PORT || 3000), '0.0.0.0',()=> console.log(`Server Running at port: ${process.env.APP_PORT || 3000}`));
