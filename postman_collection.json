@@ -1,0 +1,247 @@
+{
+	"info": {
+		"_postman_id": "836be4a0-0446-44a6-928b-f2734e17ddba",
+		"name": "hattapalino_betest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET TOKEN",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://103.171.85.183:4000/sign",
+					"protocol": "http",
+					"host": [
+						"103",
+						"171",
+						"85",
+						"183"
+					],
+					"port": "4000",
+					"path": [
+						"sign"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET USERS",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjdhNmEzMDE0LTkxZjEtNDM1MS05ZTUzLTdmOGZiZDllYjdkMCIsImlhdCI6MTY0Mjg0OTcxMywiZXhwIjoxNjQyOTM2MTEzfQ.I7Hbv17Qo9wb3TuLIN8kBq5eDLXk8uQsznGv81ryKYk",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://103.171.85.183:4000/user",
+					"protocol": "http",
+					"host": [
+						"103",
+						"171",
+						"85",
+						"183"
+					],
+					"port": "4000",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE USER",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjdhNmEzMDE0LTkxZjEtNDM1MS05ZTUzLTdmOGZiZDllYjdkMCIsImlhdCI6MTY0Mjg0OTcxMywiZXhwIjoxNjQyOTM2MTEzfQ.I7Hbv17Qo9wb3TuLIN8kBq5eDLXk8uQsznGv81ryKYk",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"TEST12\",\n    \"userName\": \"userName1\",\n    \"accountNumber\": \"accountNumber1\",\n    \"emailAddress\": \"emailAddress1\",\n    \"identityNumber\": \"identityNumber1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://103.171.85.183:4000/user",
+					"protocol": "http",
+					"host": [
+						"103",
+						"171",
+						"85",
+						"183"
+					],
+					"port": "4000",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE USER",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjdhNmEzMDE0LTkxZjEtNDM1MS05ZTUzLTdmOGZiZDllYjdkMCIsImlhdCI6MTY0Mjg0OTcxMywiZXhwIjoxNjQyOTM2MTEzfQ.I7Hbv17Qo9wb3TuLIN8kBq5eDLXk8uQsznGv81ryKYk",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://103.171.85.183:4000/user/:id",
+					"protocol": "http",
+					"host": [
+						"103",
+						"171",
+						"85",
+						"183"
+					],
+					"port": "4000",
+					"path": [
+						"user",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "TEST12"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE USER",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjdhNmEzMDE0LTkxZjEtNDM1MS05ZTUzLTdmOGZiZDllYjdkMCIsImlhdCI6MTY0Mjg0OTcxMywiZXhwIjoxNjQyOTM2MTEzfQ.I7Hbv17Qo9wb3TuLIN8kBq5eDLXk8uQsznGv81ryKYk",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userName\": \"userName2\",\n    \"accountNumber\": \"accountNumber34\",\n    \"emailAddress\": \"emailAddress44\",\n    \"identityNumber\": \"identityNumber51\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://103.171.85.183:4000/user/:id",
+					"protocol": "http",
+					"host": [
+						"103",
+						"171",
+						"85",
+						"183"
+					],
+					"port": "4000",
+					"path": [
+						"user",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "TEST12"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET USER BY ACC NUMBER",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjdhNmEzMDE0LTkxZjEtNDM1MS05ZTUzLTdmOGZiZDllYjdkMCIsImlhdCI6MTY0Mjg0OTcxMywiZXhwIjoxNjQyOTM2MTEzfQ.I7Hbv17Qo9wb3TuLIN8kBq5eDLXk8uQsznGv81ryKYk",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://103.171.85.183:4000/user/accNumber/:accNumber",
+					"protocol": "http",
+					"host": [
+						"103",
+						"171",
+						"85",
+						"183"
+					],
+					"port": "4000",
+					"path": [
+						"user",
+						"accNumber",
+						":accNumber"
+					],
+					"variable": [
+						{
+							"key": "accNumber",
+							"value": "accountNumber34"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET USER BY ID NUMBER",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjdhNmEzMDE0LTkxZjEtNDM1MS05ZTUzLTdmOGZiZDllYjdkMCIsImlhdCI6MTY0Mjg0OTcxMywiZXhwIjoxNjQyOTM2MTEzfQ.I7Hbv17Qo9wb3TuLIN8kBq5eDLXk8uQsznGv81ryKYk",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://103.171.85.183:4000/user/idNumber/:idNumber",
+					"protocol": "http",
+					"host": [
+						"103",
+						"171",
+						"85",
+						"183"
+					],
+					"port": "4000",
+					"path": [
+						"user",
+						"idNumber",
+						":idNumber"
+					],
+					"variable": [
+						{
+							"key": "idNumber",
+							"value": "identityNumber51"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
